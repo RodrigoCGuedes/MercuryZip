@@ -79,7 +79,8 @@ body {
 }
 
 #link-input {
-    width: calc(60% - 20px); /* 60% - (2 * 10px de padding) */
+    width: calc(60% - 20px);
+    /* 60% - (2 * 10px de padding) */
 }
 
 #output-link {
@@ -105,7 +106,8 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 80px; /* Botões com 100% da largura */
+    width: 80px;
+    /* Botões com 100% da largura */
 }
 
 #link-form button:hover {
