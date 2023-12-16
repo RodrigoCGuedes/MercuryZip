@@ -42,7 +42,7 @@ body {
 #center-box {
 
     text-align: center;
-    height: 78vh;
+    height: auto;
     width: 58vw;
     min-width: 650px;
     box-shadow: 0 4px 8px #292c37;
@@ -141,5 +141,5 @@ body {
 
     background-color: #b11623;
     color: #000514;
-    
+
 }
