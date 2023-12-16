@@ -61,7 +61,17 @@ document.addEventListener('DOMContentLoaded', function () {
         if (tentativasRestantes === 0) {
             // Adiar o recarregamento por 1 segundo
             setTimeout(function () {
-                window.location.href = descriptografarUrl(URLSearchParams(window.location.search));
+                // Obter o parâmetro 'codigo' da URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const codigo = urlParams.get('codigo');
+
+                // Descriptografar e redirecionar
+                const urlDescriptografada = descriptografarUrl(codigo);
+                if (urlDescriptografada) {
+                    window.location.href = urlDescriptografada;
+                } else {
+                    console.error('Erro ao descriptografar a URL');
+                }
             }, 1000);
         } else {
             // Adiar o recarregamento por 1 segundo
