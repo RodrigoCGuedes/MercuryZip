@@ -72,8 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (textoDigitado === numeroImagem) {
                 tentativasRestantes--;
-            } else {
-                tentativasRestantes--;
             }
 
             localStorage.setItem('tentativasRestantes', tentativasRestantes);
