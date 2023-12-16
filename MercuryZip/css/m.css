@@ -28,7 +28,6 @@ body {
     height: 78vh;
     width: 20vw;
     box-shadow: 0 4px 8px #292c37;
-    color: #CEB082;
 }
 
 #center-box {
@@ -56,8 +55,34 @@ body {
 
 #verification {
     border: solid 2px #292c37;
-    margin: 30px;
-    height: 150px;
+    box-shadow: 0 4px 8px #292c37;
+    margin: 10px;
+    height: 180px;
     width: 400px;
     min-width: 400px;
+}
+
+#verification {
+    border: solid 2px #292c37;
+    box-shadow: 0 4px 8px #292c37;
+    margin: 10px;
+    height: 220px;
+    width: 400px;
+    min-width: 400px;
+}
+
+#verification img {
+    border: solid 2px #292c37;
+    box-shadow: 0 4px 8px #292c37;
+}
+
+#texto-input {
+    box-sizing: border-box;
+    width: 55%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    outline: none;
 }
