@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    imagemVerification.src = `/MercuryZip/images/num/${obterImagemAleatoria()}`;
+    imagemVerification.src = `/num/${obterImagemAleatoria()}`;
 
     function verificarCorrespondencia(event) {
         if (event.key === 'Enter') {

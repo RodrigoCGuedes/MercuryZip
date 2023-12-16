@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #cccccc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#top-banner {
+    display: grid;
+    place-items: center;
+    height: 125px;
+    width: 98vw;
+    border: solid 2px #292c37;
+    box-shadow: 0 4px 8px #292c37;
+    background-color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+#left-banner,
+#right-banner {
+    height: 78vh;
+    width: 20vw;
+    box-shadow: 0 4px 8px #292c37;
+}
+
+#center-box {
+    display: flex; /* Adicionado para usar o modelo de layout flexbox */
+    flex-direction: column; /* Coluna para alinhar elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center;
+    height: 78vh;
+    width: 58vw;
+    min-width: 650px;
+    box-shadow: 0 4px 8px #292c37;
+}
+
+#center-box h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #9f111b;
+}
+
+#center-box h2 {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    color: #292c37;
+}
+
+#verification {
+    border: solid 2px #292c37;
+    box-shadow: 0 4px 8px #292c37;
+    margin: 10px;
+    height: 180px;
+    width: 400px;
+    min-width: 400px;
+}
+
+#verification {
+    border: solid 2px #292c37;
+    box-shadow: 0 4px 8px #292c37;
+    margin: 10px;
+    height: 220px;
+    width: 400px;
+    min-width: 400px;
+}
+
+#verification img {
+    border: solid 2px #292c37;
+    box-shadow: 0 4px 8px #292c37;
+}
+
+#texto-input {
+    box-sizing: border-box;
+    width: 55%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    outline: none;
+}
