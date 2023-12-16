@@ -59,19 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Função para redirecionar após as tentativas
     function redirecionarAposTentativas() {
         if (tentativasRestantes === 0) {
-            // Adiar o recarregamento por 1 segundo
-            setTimeout(function () {
-                // Obter o parâmetro 'codigo' da URL
-                const codigo = new URLSearchParams(window.location.search);
 
-                // Descriptografar e redirecionar
-                const urlDescriptografada = descriptografarUrl(codigo);
-                if (urlDescriptografada) {
-                    window.location.href = urlDescriptografada;
-                } else {
-                    console.error('Erro ao descriptografar a URL');
-                }
+            setTimeout(function () {
+                window.location.href = descriptografarUrl(URLSearchParams(window.location.search));
             }, 1000);
+            
         } else {
             // Adiar o recarregamento por 1 segundo
             setTimeout(function () {
