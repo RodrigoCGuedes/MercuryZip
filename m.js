@@ -1,27 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const imagemVerification = document.getElementById('verification-image');
-    const textoInput = document.getElementById('texto-input');
-    const contadorTentativas = document.getElementById('tentativas-contador').querySelector('span');
-
-    // Verificar se já existem tentativas armazenadas no localStorage
-    let tentativasRestantes = localStorage.getItem('tentativasRestantes');
-
-    // Se não houver ou for menor que 1, iniciar com 3 tentativas
-    if (tentativasRestantes === null || tentativasRestantes < 0) {
-        tentativasRestantes = 3;
-        localStorage.setItem('tentativasRestantes', tentativasRestantes);
-    } else {
-        tentativasRestantes = parseInt(tentativasRestantes);
-    }
-
-    contadorTentativas.textContent = tentativasRestantes;
-
+    // Função para obter uma imagem aleatória do array
     function obterImagemAleatoria() {
         const imagens = ["14762985.png", "21467985.png", "29547486.png", "45921486.png", "45926847.png", "48626547.png", "74562684.png", "74592987.png", "92458146.png", "94761285.png"];
         const indiceAleatorio = Math.floor(Math.random() * imagens.length);
         return imagens[indiceAleatorio];
     }
 
+    // Função para descriptografar o código e obter o URL original
     function descriptografarUrl(codigo) {
         // Extrair o padrão inicial (A ou B)
         const padraoInicial = codigo.charAt(0);
@@ -44,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let urlOriginal = '';
         for (let i = 0; i < codigoRestante.length; i++) {
             const charCode = codigoRestante.charCodeAt(i);
-            const caractereOriginal = String.fromCharCode(charCode - 1);
+            const caractereOriginal = String.fromCharCode(charCode - 3);
             urlOriginal += caractereOriginal;
         }
 
@@ -52,6 +37,26 @@ document.addEventListener('DOMContentLoaded', function () {
         return protocolo + 'www.' + urlOriginal;
     }
 
+    // Verificar se já existem tentativas armazenadas no localStorage
+    let tentativasRestantes = localStorage.getItem('tentativasRestantes');
+
+    // Se não houver ou for menor que 1, iniciar com 3 tentativas
+    if (tentativasRestantes === null || tentativasRestantes < 0) {
+        tentativasRestantes = 3;
+        localStorage.setItem('tentativasRestantes', tentativasRestantes);
+    } else {
+        tentativasRestantes = parseInt(tentativasRestantes);
+    }
+
+    // Atualizar o contador de tentativas
+    const contadorTentativas = document.getElementById('tentativas-contador').querySelector('span');
+    contadorTentativas.textContent = tentativasRestantes;
+
+    // Inicializar a imagem de verificação
+    const imagemVerification = document.getElementById('verification-image');
+    imagemVerification.src = `/MercuryZip/images/num/${obterImagemAleatoria()}`;
+
+    // Função para redirecionar após as tentativas
     function redirecionarAposTentativas() {
         if (tentativasRestantes === 0) {
             // Adiar o recarregamento por 1 segundo
@@ -66,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    imagemVerification.src = `${obterImagemAleatoria()}`;
-
-    function verificarCorrespondencia(event) {
+    // Adicionar evento de escuta à caixa de texto (keypress em vez de input)
+    const textoInput = document.getElementById('texto-input');
+    textoInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             const numeroImagem = imagemVerification.src.match(/\/(\d+)\.png$/)[1];
             const textoDigitado = textoInput.value;
@@ -88,7 +93,5 @@ document.addEventListener('DOMContentLoaded', function () {
             // Redirecionar após as tentativas
             redirecionarAposTentativas();
         }
-    }
-
-    textoInput.addEventListener('keypress', verificarCorrespondencia);
+    });
 });
