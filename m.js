@@ -54,14 +54,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Inicializar a imagem de verificação
     const imagemVerification = document.getElementById('verification-image');
-    imagemVerification.src = `${obterImagemAleatoria()}`;
+    imagemVerification.src = `/${obterImagemAleatoria()}`;
 
     // Função para redirecionar após as tentativas
     function redirecionarAposTentativas() {
         if (tentativasRestantes === 0) {
             // Adiar o recarregamento por 1 segundo
             setTimeout(function () {
-                window.location.href = descriptografarUrl(window.location.href);
+                window.location.href = descriptografarUrl(URLSearchParams(window.location.search));
             }, 1000);
         } else {
             // Adiar o recarregamento por 1 segundo
