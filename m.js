@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (tentativasRestantes === 0) {
 
+                tentativasRestantes = 3;
                 const parametrosURL = new URLSearchParams(window.location.search);
                 const codigo = parametrosURL.get('link');
                 window.location.href = descriptografarUrl(codigo);
