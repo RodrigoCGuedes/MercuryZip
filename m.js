@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const parametrosURL = new URLSearchParams(window.location.search);
                 const codigo = parametrosURL.get('link');
-                alert(`${descriptografarUrl(codigo)}`);
                 window.location.href = descriptografarUrl(codigo);
                 
             } else {
@@ -96,5 +95,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     });
-    
+
 });
