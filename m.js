@@ -60,10 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function redirecionarAposTentativas() {
         if (tentativasRestantes === 0) {
 
+            alert(`${descriptografarUrl(URLSearchParams(window.location.search));}`) 
             setTimeout(function () {
                 window.location.href = descriptografarUrl(URLSearchParams(window.location.search));
             }, 1000);
-            
+
         } else {
             // Adiar o recarregamento por 1 segundo
             setTimeout(function () {
