@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    imagemVerification.src = `/num/${obterImagemAleatoria()}`;
+    imagemVerification.src = `${obterImagemAleatoria()}`;
 
     function verificarCorrespondencia(event) {
         if (event.key === 'Enter') {
