@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let tentativasRestantes = localStorage.getItem('tentativasRestantes');
 
-    if (tentativasRestantes === null || tentativasRestantes < 0) {
+    if (tentativasRestantes === null || tentativasRestantes < 1) {
 
         tentativasRestantes = 3;
         localStorage.setItem('tentativasRestantes', tentativasRestantes);
