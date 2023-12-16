@@ -59,14 +59,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Função para redirecionar após as tentativas
     function redirecionarAposTentativas() {
         if (tentativasRestantes === 0) {
-
             const parametrosURL = new URLSearchParams(window.location.search);
             const codigo = parametrosURL.get('link');
-
+    
+            console.log('Descriptografado:', descriptografarUrl(codigo));
             alert(`${descriptografarUrl(codigo)}`);
             window.location.href = descriptografarUrl(codigo);
-
-        } else {
+        }else {
             // Adiar o recarregamento por 1 segundo
             setTimeout(function () {
                 location.reload();
