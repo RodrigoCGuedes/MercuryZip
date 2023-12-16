@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MercuryZip</title>
+
+    <link rel="icon" href="/MercuryZip/images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/MercuryZip/css/index.css">
+
+    <script src="/MercuryZip/html/index.html"></script>
+</head>
+
+<body>
+
+    <!-- Banner no topo com logo e nome -->
+    <div id="top-banner">
+        <img src="/MercuryZip/images/Logo.png" alt="Logo - MercuryZip">
+        <!-- Adicione outros elementos necessários aqui -->
+    </div>
+
+    <div class="container">
+
+        <!-- Banners de anúncios nas laterais -->
+        <div id="left-banner">
+            <!-- Seu conteúdo para o left-banner -->
+        </div>
+
+        <!-- Caixa central com botão para o link -->
+        <div id="center-box">
+
+            <br><br>
+            <h1>PROTETOR DE LINK'S GRATUITO</h1>
+            <h2>Com a velocidade digna do Deus Mercúrio</h2>
+            <h2>MercuryZip protege seus links em um piscar de olhos</h2>
+            <br><br>
+
+            <form id="link-form">
+                <label for="link-input">Digite o link:</label>
+                <input type="text" id="link-input" name="link" placeholder="Insira o link aqui">
+                <button type="button" onclick="encurtarLink()">Proteger</button>
+        
+                <!-- Caixa de texto de saída -->
+                <div class="output-container">
+                    <label for="output-link">Link protegido:</label>
+                    <input type="text" id="output-link" readonly>
+                    <button type="button" onclick="copiarLink()">Copiar</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div id="right-banner">
+            <!-- Seu conteúdo para o right-banner -->
+        </div>
+
+    </div>
+
+</body>
+
+</html>
