@@ -62,8 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Adiar o recarregamento por 1 segundo
             setTimeout(function () {
                 // Obter o parâmetro 'codigo' da URL
-                const urlParams = new URLSearchParams(window.location.search);
-                const codigo = urlParams.get('codigo');
+                const codigo = new URLSearchParams(window.location.search);
 
                 // Descriptografar e redirecionar
                 const urlDescriptografada = descriptografarUrl(codigo);
