@@ -22,6 +22,19 @@ body {
 
 }
 
+#low-banner {
+
+    display: grid;
+    place-items: center;
+    height: 125px;
+    width: 98vw;
+    border: solid 2px #292c37;
+    box-shadow: 0 4px 8px #292c37;
+    background-color: #000000;
+    color: #cccccc;
+
+}
+
 .container {
 
     display: flex;
