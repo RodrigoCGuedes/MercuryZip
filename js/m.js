@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     contadorTentativas.textContent = tentativasRestantes;
 
     const imagemVerification = document.getElementById('verification-image');
-    imagemVerification.src = `${obterImagemAleatoria()}`;
+    imagemVerification.src = `/img/num/${obterImagemAleatoria()}`;
 
     const textoInput = document.getElementById('texto-input');
 

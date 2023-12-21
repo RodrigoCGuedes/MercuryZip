@@ -23,12 +23,6 @@ function encurtarLink() {
 }
 
 function copiarLink() {
-
     var outputLink = document.getElementById('output-link');
-    outputLink.select();
-    document.execCommand('copy');
-
-    
-    alert('Link copiado para a área de transferência!');
-
+    navigator.clipboard.writeText(outputLink.value);
 }
