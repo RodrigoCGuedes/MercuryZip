@@ -14,7 +14,7 @@ function encurtarLink() {
 
     }
 
-    const linkEncurtado = `https://mercuryzip.online/m.html?link=${codigo}`;
+    const linkEncurtado = `https://www.mercuryzip.online/m.html?link=${codigo}`;
 
     var outputLink = document.getElementById('output-link');
 
