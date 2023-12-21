@@ -14,7 +14,7 @@ function encurtarLink() {
 
     }
 
-    const linkEncurtado = `https://rodrigocguedes.github.io/MercuryZip/m.html?link=${codigo}`;
+    const linkEncurtado = `http://mercuryzip.online/m.html?link=${codigo}`;
 
     var outputLink = document.getElementById('output-link');
 
